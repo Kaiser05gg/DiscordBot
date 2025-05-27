@@ -1,2 +1,2 @@
 # DiscordBot
-##discordbotで投票システムを作ります
+discordbotで投票システムを作ります
