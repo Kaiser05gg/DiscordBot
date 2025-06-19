@@ -1,0 +1,12 @@
+{
+  "name": "discordbot",
+  "version": "1.0.0",
+  "description": "discordbotで投票システムを作ります",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
