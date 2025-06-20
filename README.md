@@ -10,6 +10,8 @@
 
 ### 基本設計：TS、discord API
 
+---
+
 ### やることリスト：
 
 - DEVELOPER PORTAL  を使い discordbot アカウントの作成&初期設定{1}
@@ -25,6 +27,6 @@
   ↓
 - 拠点サーバーで使う 1h
 
-## {1}https://qiita.com/1ntegrale9/items/cb285053f2fa5d0cccdf
+### {1}https://qiita.com/1ntegrale9/items/cb285053f2fa5d0cccdf
 
 ## 締日：６末
