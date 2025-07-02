@@ -1,9 +1,20 @@
 import { Client, GatewayIntentBits } from "discord.js";
 import { config } from "dotenv";
 import { scheduleDailyPoll } from "./schedule";
-
+import { Events } from "discord.js";
+import  express from "express";
 config();
 
+const app = express();
+const PORT = process.env.PORT || 3000;
+
+app.get('/', (_req, res) => {
+  res.send('Bot is running!');
+});
+
+app.listen(PORT, () => {
+  console.log(`Web server listening on port ${PORT}`);
+});
 
 
 const client = new Client({
@@ -23,7 +34,7 @@ client.login(process.env.DISCORD_TOKEN);
 
 
 
-import { Events } from "discord.js";
+
 
 client.on(Events.MessageReactionAdd, async (reaction, user) => {
   if (user.bot) return;
@@ -48,6 +59,8 @@ client.on(Events.MessageReactionAdd, async (reaction, user) => {
     }
   }
 });
+
+
 
 
 //以下はテスト用

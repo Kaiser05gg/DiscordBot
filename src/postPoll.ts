@@ -23,4 +23,4 @@ export async function postPoll(client: Client, channelId: string) {
   for (const emoji of Object.keys(reactions)) {
     await message.react(emoji);
   }
-}
+} 
