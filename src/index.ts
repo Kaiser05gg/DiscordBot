@@ -1,5 +1,3 @@
-// import dotenv from 'dotenv';
-// dotenv.config();
 import { Client, GatewayIntentBits } from "discord.js";
 import { config } from "dotenv";
 import { scheduleDailyPoll } from "./schedule";
@@ -52,12 +50,11 @@ client.on(Events.MessageReactionAdd, async (reaction, user) => {
 });
 
 
+//以下はテスト用
 
-
-import { postPoll } from "./postPoll"; // ← 追加（すでにしてあればOK）
+import { postPoll } from "./postPoll"; 
 const channelId = process.env.CHANNEL_ID as string;
 client.once("ready", async () => {
   console.log(`Logged in as ${client.user?.tag}`);
-  await postPoll(client,channelId); // ← 強制実行！
-  // scheduleDailyPoll(client); ← コメントアウトしてもOK
+  await postPoll(client,channelId);
 });
