@@ -7,10 +7,20 @@ export async function postPoll(client: Client, channelId: string) {
     return;
   }
 
-  const message = await channel.send("📊 **今日の予定は？**\n以下の中から選んでください！");
-  const reactions = ["🕗", "🕣", "🕘", "🕙", "❓"]; // 〜８, ８〜９, ９, １０〜, 時間未定
+  const reactions: { [emoji: string]: string } = {
+    "1️⃣": "〜８時",
+    "2️⃣": "８時〜９時",
+    "3️⃣": "９時",
+    "4️⃣": "１０時以降",
+    "🤔": "時間不明",
+    "❎": "不参加"
+  };
+  const description = Object.entries(reactions)
+    .map(([emoji, label]) => `${emoji}：${label}`)
+    .join("\n");
 
-  for (const emoji of reactions) {
+  const message = await channel.send(`**本日のVALORANT**\n以下から選んでください\n\n${description}`);
+  for (const emoji of Object.keys(reactions)) {
     await message.react(emoji);
   }
 }

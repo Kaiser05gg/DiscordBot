@@ -4,7 +4,10 @@
   "description": "discordbotで投票システムを作ります",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "ts-node src/index.ts",
+    "build": "tsc",
+    "start": "node dist/index.js"
   },
   "keywords": [],
   "author": "",
@@ -15,8 +18,9 @@
     "node-cron": "^4.1.1"
   },
   "devDependencies": {
-    "@types/node": "^24.0.7",
+    "@types/node": "^24.0.8",
     "@types/node-cron": "^3.0.11",
+    "@types/ws": "^8.18.1",
     "ts-node": "^10.9.2",
     "typescript": "^5.8.3"
   }
