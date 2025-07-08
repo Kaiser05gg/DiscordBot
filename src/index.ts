@@ -65,9 +65,9 @@ client.on(Events.MessageReactionAdd, async (reaction, user) => {
 
 //以下はテスト用
 
-// import { postPoll } from "./postPoll"; 
-// const channelId = process.env.CHANNEL_ID as string;
-// client.once("ready", async () => {
-//   console.log(`Logged in as ${client.user?.tag}`);
-//   await postPoll(client,channelId);
-// });
+import { postPoll } from "./postPoll"; 
+const channelId = process.env.CHANNEL_ID as string;
+client.once("ready", async () => {
+  console.log(`Logged in as ${client.user?.tag}`);
+  await postPoll(client,channelId);
+});
